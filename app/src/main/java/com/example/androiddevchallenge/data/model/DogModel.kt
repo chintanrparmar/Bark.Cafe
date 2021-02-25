@@ -13,15 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.data.model
 
-import androidx.compose.ui.graphics.Color
+import java.io.Serializable
 
-val purple200 = Color(0xFFBB86FC)
-val purple500 = Color(0xFF6200EE)
-val purple700 = Color(0xFF3700B3)
-val teal200 = Color(0xFF03DAC5)
-val yellow100 = Color(0xFFFFF8E8)
-val yellow300 = Color(0xFF926340)
-val yellow400 = Color(0xFF775134)
-val yellow500 = Color(0xFF5B0A09)
+data class DogModel(
+    val id: Int,
+    val title: String,
+    val breed: String,
+    val imageId: Int,
+    val description: String = "demo source"
+) : Serializable
