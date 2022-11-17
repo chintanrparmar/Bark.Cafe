@@ -76,14 +76,15 @@ fun MyApp() {
                         Text(text = "Bark.cafe", color = yellow500)
                     }
                 },
-                elevation = 0.dp,
+                elevation = 0.dp
 
             )
         }
-    ) {
+    ) { paddingValues ->
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                .padding(paddingValues)
                 .padding(bottom = 24.dp, start = 21.dp, end = 21.dp, top = 12.dp)
         ) {
             DogList()
@@ -120,7 +121,6 @@ fun DogListItem(item: DogModel, modifier: Modifier = Modifier) {
                     }
                 )
         ) {
-
             val imageModifier = Modifier
                 .height(150.dp)
                 .fillMaxWidth()

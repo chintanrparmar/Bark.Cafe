@@ -81,10 +81,10 @@ class DetailActivity : AppCompatActivity() {
 fun DogDetailContent(dogData: DogModel) {
     val typography = MaterialTheme.typography
     val context = LocalContext.current
-    Scaffold {
+    Scaffold { paddingValues ->
         Column(
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxSize().padding(paddingValues)
         ) {
             val imageModifier = Modifier
                 .fillMaxWidth()
@@ -145,7 +145,7 @@ fun DogDetailContent(dogData: DogModel) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(vertical = 12.dp, horizontal = 100.dp)
-                        .clip(CircleShape),
+                        .clip(CircleShape)
                 ) {
                     Text(
                         text = "Adopt Me",
